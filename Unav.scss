@@ -18,4 +18,23 @@
         transform: translateY(100%);
     }
 }
-  
+.title{
+    font-size: 200%;
+    font-weight: bolder;
+}
+.text{
+    padding-top: 100px; 
+    width: 80%;
+    margin: 0 auto;
+    max-width: 600px;
+}
+.user_name{
+    font-size: 75%;
+}
+.date{
+    font-size: 75%;
+    color: grey;
+}
+.user_data div{
+    display: inline-block; //要素を横一列に
+}

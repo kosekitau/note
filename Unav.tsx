@@ -44,22 +44,56 @@ export const Unav = () => {
         setIine(good2);
         setIines(count_good2);
     };
+    const list = [];
+    for(var i=0;i<100;i++){
+        list.push(<p>٩(^‿^)۶٩( ᐛ )و</p>)
+    }
     
     return (
-        <div className={`Unav ${show && "Unav-footer-animation"}`}>
-            <div className='iine_button' onClick={() => hanten()}>
-                {good ? (
-                    <FontAwesomeIcon icon={['fas', 'heart']} style={{color:'pink'}} size='2x' fixedWidth/>
-                    ) : (
-                    <FontAwesomeIcon icon={['far', 'heart']} style={{color:'pink'}} size='2x' fixedWidth/>
-                    )
-                }
-                <span>{count_good}</span>
-                <FontAwesomeIcon icon={['fas', 'plus']} style={{color:'gray'}} size='2x'/>
-                <FontAwesomeIcon icon={['far', 'clone']} style={{color:'gray'}} size='2x'/>
-                <FontAwesomeIcon icon={['fab', 'twitter']} style={{color:'gray'}} size='2x'/>
-                <FontAwesomeIcon icon={['fab', 'facebook']} style={{color:'gray'}} size='2x'/>
-                <FontAwesomeIcon icon={['fab', 'line']} style={{color:'gray'}} size='2x'/>
+        <div className='main'>
+            <div className='text'>
+                <img className='react_logo' src='logo512.png'/>
+                <div className='title'>
+                    【React】Noteみたいなやつ
+                </div>
+                <p>
+                    {good ? (
+                        <FontAwesomeIcon icon={['fas', 'heart']} style={{color:'pink'}} size='1x' fixedWidth/>
+                        ) : (
+                        <FontAwesomeIcon icon={['far', 'heart']} style={{color:'gray'}} size='1x' fixedWidth/>
+                        )
+                    }
+                    <span>{count_good}</span>
+                </p>
+                <div className='user_data'>
+                    <FontAwesomeIcon icon={['far', 'user']} style={{color:'green'}} size='2x' fixedWidth/>
+                    <div className='user_name'>
+                        kosekitau
+                    </div>
+                    <div className='date'>
+                        1111/11/11 22:22
+                    </div>
+                </div>
+                
+                {/*　↓TEXT入れたい　*/}
+                <p>{list}</p>
+            </div>
+
+            <div className={`Unav ${show && "Unav-footer-animation"}`}>
+                <div className='iine_button' onClick={() => hanten()}>
+                    {good ? (
+                        <FontAwesomeIcon icon={['fas', 'heart']} style={{color:'pink'}} size='2x' fixedWidth/>
+                        ) : (
+                        <FontAwesomeIcon icon={['far', 'heart']} style={{color:'gray'}} size='2x' fixedWidth/>
+                        )
+                    }
+                    <span>{count_good}</span>
+                    <FontAwesomeIcon icon={['fas', 'plus']} style={{color:'gray'}} size='2x'/>
+                    <FontAwesomeIcon icon={['far', 'clone']} style={{color:'gray'}} size='2x'/>
+                    <FontAwesomeIcon icon={['fab', 'twitter']} style={{color:'gray'}} size='2x'/>
+                    <FontAwesomeIcon icon={['fab', 'facebook']} style={{color:'gray'}} size='2x'/>
+                    <FontAwesomeIcon icon={['fab', 'line']} style={{color:'gray'}} size='2x'/>
+                </div>
             </div>
         </div>
     );
