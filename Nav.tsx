@@ -34,11 +34,9 @@ export const Nav = () => {
     });//この[]に引数を入れる
     return (
         <div className={`Nav ${show && "Nav-footer-animation"}`}>
-            <div className='nav'>
-                <FontAwesomeIcon icon={['fas', 'search']} style={{color:'grey'}} size='2x'/>
-                <p>ログイン</p>
-                <input type="button" id="button1" value="新規登録"></input>
-            </div>
+            <FontAwesomeIcon icon={['fas', 'search']} className="roope" style={{color:'grey'}} size='1x'/>
+            <p>ログイン</p>
+            <input className="newbutton" type="button" value="新規登録"></input>
         </div>
     );
 }

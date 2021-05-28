@@ -68,15 +68,34 @@ export const Unav = () => {
                 <div className='user_data'>
                     <FontAwesomeIcon icon={['far', 'user']} style={{color:'green'}} size='2x' fixedWidth/>
                     <div className='user_name'>
-                        kosekitau
-                    </div>
-                    <div className='date'>
+                        kosekitau<br />
                         1111/11/11 22:22
                     </div>
                 </div>
                 
                 {/*　↓TEXT入れたい　*/}
                 <p>{list}</p>
+
+                <div className='user_profile'>
+                    <div className='icon'>
+                        {good ? (
+                            <FontAwesomeIcon icon={['fas', 'heart']} style={{color:'pink'}} size='2x' fixedWidth/>
+                            ) : (
+                            <FontAwesomeIcon icon={['far', 'heart']} style={{color:'gray'}} size='2x' fixedWidth/>
+                            )
+                        }
+                        <FontAwesomeIcon icon={['fas', 'ellipsis-h']} style={{color:'gray'}} size='2x' fixedWidth/>
+                        <FontAwesomeIcon icon={['fab', 'twitter']} style={{color:'skyblue'}} size='2x'/>
+                        <FontAwesomeIcon icon={['fab', 'facebook']} style={{color:'blue'}} size='2x'/>
+                        <FontAwesomeIcon icon={['fab', 'line']} style={{color:'green'}} size='2x'/>
+                        <FontAwesomeIcon icon={['far', 'user']} style={{color:'green'}} size='2x' fixedWidth/>
+                        <div className='user_name'>
+                            kosekitau<br />
+                        </div>
+                    </div>
+                    <div className='profile'></div>
+                </div>
+
             </div>
 
             <div className={`Unav ${show && "Unav-footer-animation"}`}>
@@ -88,7 +107,7 @@ export const Unav = () => {
                         )
                     }
                     <span>{count_good}</span>
-                    <FontAwesomeIcon icon={['fas', 'plus']} style={{color:'gray'}} size='2x'/>
+                    <FontAwesomeIcon icon={['fas', 'plus']} style={{color:''}} size='2x'/>
                     <FontAwesomeIcon icon={['far', 'clone']} style={{color:'gray'}} size='2x'/>
                     <FontAwesomeIcon icon={['fab', 'twitter']} style={{color:'gray'}} size='2x'/>
                     <FontAwesomeIcon icon={['fab', 'facebook']} style={{color:'gray'}} size='2x'/>
